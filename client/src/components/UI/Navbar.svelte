@@ -9,17 +9,20 @@
         width: 100%;
         height: 3.5rem;
         display: grid;
-        grid-template-columns: 3fr 1fr 6fr 1fr;
+        grid-template-columns: 3fr 1fr 6fr;
         justify-items: start;
         align-items: center;
+        box-shadow: 0 2px lightgrey;
     }
+
+    h1 { padding: 0 .25rem;}
 
     .logo {
         grid-column: 1 / 2;
     }
 
     nav {
-        grid-column: 3 / 4;
+        grid-column: 3 / -1;
         background: var(--red-bright);
     }
 
@@ -64,6 +67,5 @@
             <li><a href="#">Training</a></li>
         </ul>
     </nav>
-
 </header>
 
