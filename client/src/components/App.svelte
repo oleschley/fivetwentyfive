@@ -1,19 +1,20 @@
 <script>
+	import Navbar from './UI/Navbar.svelte'
 	import Header from './UI/Header.svelte'
 	import Article from './UI/Article.svelte'
 </script>
 
-<style lang="sass">
-	@import '../styles/styles.sass';
+<style>
 
 	.app {
 		font-family: 'Source Sans Pro';
-		color: $grey_dark;
+		color: var(--grey-dark);
 	}
 
 </style>
 
 <div class="app">
-	<Header name=".525"/>
-	<Article/>
+	<Navbar />
+	<!-- <Header name=".525"/> -->
+	<!-- <Article/> -->
 </div>

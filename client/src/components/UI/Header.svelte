@@ -2,13 +2,11 @@
     export let name;
 </script>
 
-<style lang="sass">
-
-	@import '../../styles/styles.sass';
+<style>
 
 	h1 {
 		font-family: 'Roboto Slab';
-		color: $red_bright;
+		color: var(--red-bright);
 	}
 
 </style>
