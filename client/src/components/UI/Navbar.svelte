@@ -9,31 +9,27 @@
         width: 100%;
         height: 3.5rem;
         display: grid;
-        grid-template-columns: .5fr 3fr 1fr 6fr 1fr;
-        align-items: center
+        grid-template-columns: 3fr 1fr 6fr 1fr;
+        justify-items: start;
+        align-items: center;
     }
 
     .logo {
-        grid-column: 2 / 3;
+        grid-column: 1 / 2;
     }
 
     nav {
-        grid-column: 4 / 5;
-        top: 100%;
-        left: 0;
+        grid-column: 3 / 4;
         background: var(--red-bright);
     }
 
     nav ul {
-        margin: 0;
-        padding: 0;
         list-style: none;
         display: flex;
         justify-content: flex-end;
     }
 
     nav li {
-        margin-bottom: 0;
         margin-left: 3em;
     }
 
@@ -59,7 +55,7 @@
 
 
 <header>
-    <h1 class="logo">.fivetwentyfive</h1>
+    <h1 class="logo">.525</h1>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
