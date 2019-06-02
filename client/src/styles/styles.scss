@@ -1,0 +1,20 @@
+@charset "utf-8";
+@import "../../node_modules/bulma/bulma.sass";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Source+Sans+Pro');
+
+// Color Theme
+$red-bright: #cd0000;
+$blue-bright: #0aa6fc;
+$grey-light: #f4f4f4;
+$grey-dark: #3b3b3b;
+
+
+$font-header: 'Roboto Slab', serif;
+
+// Bulma Definitions
+$family-sans-serif: 'Source Sans Pro', sans-serif;
+
+// Override Colors
+$primary: $blue-bright;
+
+

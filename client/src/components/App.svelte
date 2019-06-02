@@ -26,11 +26,13 @@
 
 </style>
 
+
+<Navbar class="navbar"/>
 <div class="app">
-	<Navbar class="navbar"/>
 	<div class="content">
 		<Header name=".525"/>
 		<Article/>
 	</div>
+	
 
 </div>
