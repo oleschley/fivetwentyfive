@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "license": "MIT",
   "devDependencies": {
-    "bulma": "^0.7.5",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.6.0",
@@ -20,6 +19,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "css-build": "node-sass --omit-source-map-url src/styles/styles.scss public/styles.css",
+    "css-watch": "npm run css-build -- --watch",
     "dev": "webpack-dev-server --content-base public"
   }
 }
