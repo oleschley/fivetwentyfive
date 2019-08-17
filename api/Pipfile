@@ -9,6 +9,7 @@ pylint = "*"
 
 [packages]
 flask = "*"
+pymongo = {extras = ["srv", "tls"],version = "*"}
 
 [requires]
 python_version = "3.7"
