@@ -29,6 +29,6 @@
     "build": "cross-env NODE_ENV=production webpack",
     "css-build": "node-sass --omit-source-map-url src/styles/style.scss public/style.css",
     "css-watch": "npm run css-build -- --watch",
-    "dev": "webpack-dev-server --content-base public"
+    "dev": "webpack-dev-server --content-base dist"
   }
 }
