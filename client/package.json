@@ -2,6 +2,15 @@
   "name": "fivetwentyfive",
   "version": "0.0.1",
   "license": "MIT",
+  "author": "ols",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleschley/fivetwentyfive.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oleschley/fivetwentyfive/issues"
+  },
+  "homepage": "https://github.com/oleschley/fivetwentyfive#readme",
   "devDependencies": {
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
@@ -18,7 +27,7 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "css-build": "node-sass --omit-source-map-url src/styles/styles.scss public/styles.css",
+    "css-build": "node-sass --omit-source-map-url src/styles/theme.scss public/styles.css",
     "css-watch": "npm run css-build -- --watch",
     "dev": "webpack-dev-server --content-base public"
   }
