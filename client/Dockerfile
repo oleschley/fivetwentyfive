@@ -1,3 +1,5 @@
+# VERY OLD DOCKERFILE, DO NOT USE
+
 FROM node:alpine AS builder
 WORKDIR /app
 COPY ./package.json .

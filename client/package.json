@@ -3,32 +3,28 @@
   "version": "0.0.1",
   "license": "MIT",
   "author": "ols",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oleschley/fivetwentyfive.git"
-  },
-  "bugs": {
-    "url": "https://github.com/oleschley/fivetwentyfive/issues"
-  },
-  "homepage": "https://github.com/oleschley/fivetwentyfive#readme",
-  "devDependencies": {
-    "cross-env": "^5.2.0",
-    "css-loader": "^2.1.1",
-    "mini-css-extract-plugin": "^0.6.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
-    "serve": "^11.0.0",
-    "style-loader": "^0.23.1",
-    "svelte": "^3.0.0",
-    "svelte-loader": "2.13.3",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.3.1"
-  },
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
-    "css-build": "node-sass --omit-source-map-url src/styles/style.scss public/style.css",
-    "css-watch": "npm run css-build -- --watch",
-    "dev": "webpack-dev-server --content-base dist"
+    "dev": "sapper dev",
+    "build": "sapper build",
+    "export": "sapper export",
+    "start": "node __sapper__/build",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run",
+    "css-build": "node-sass --omit-source-map-url styles/style.scss static/global.css",
+    "css-watch": "npm run css-build -- --watch"
+  },
+  "dependencies": {
+    "compression": "^1.7.1",
+    "polka": "next",
+    "sirv": "^0.4.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "node-sass": "^4.12.0",
+    "sapper": "^0.27.0",
+    "svelte": "^3.0.0",
+    "svelte-loader": "^2.9.0",
+    "webpack": "^4.7.0"
   }
 }

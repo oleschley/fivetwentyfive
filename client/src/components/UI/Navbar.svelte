@@ -28,21 +28,16 @@
 
   .navbar-item {
     display: inline;
-    color: white
+    color: white;
   }
-
 
 </style>
 
 <div class="navbar primary">
-  <a href="#"><img class="navbar-brand" src="./images/temple-small.jpg" alt="temple brand"></a>
+  <a href="."><img class="navbar-brand" src="images/temple-small.jpg" alt="temple brand"></a>
   <ul class="navbar-items">
-    <li><a href="#" class="navbar-item">training</a></li>
-    <li><a href="#" class="navbar-item">nutrition</a></li>
-    <li><a href="#" class="navbar-item">blog</a></li>
-  </ul>
-  <ul class="navbar-items">
-    <li><i class="fas fa-arrow-left"></i></li>
-    <li><i class="fas fa-home"></i></li>
+    <li><a href="training" class="navbar-item">training</a></li>
+    <li><a href="nutrition" class="navbar-item">nutrition</a></li>
+    <li><a href="visuals" class="navbar-item">visuals</a></li>
   </ul>
 </div>
