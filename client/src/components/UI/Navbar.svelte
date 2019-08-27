@@ -8,6 +8,7 @@
     align-items: center;
     justify-items: stretch;
     font-size: 1.1rem;
+    background-color: var(--gray-dark)
   }
 
   .navbar-brand {
@@ -38,7 +39,7 @@
   const nav_items = ['training', 'nutrition', 'visuals']
 </script>
 
-<div class="navbar primary">
+<div class="navbar">
   <a href="."><img class="navbar-brand" src="images/temple-small.jpg" alt="temple brand"></a>
   <ul class="navbar-items">
     {#each nav_items as item}

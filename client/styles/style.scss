@@ -2,50 +2,82 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Source+Sans+Pro');
 
 
-$red-bright: #cd0000;
-$blue: rgba(61,95,138,1);
-$blue-mute: rgba(134, 164, 202, 1);
-$grey-light: #f4f4f4;
-$grey-dark: #3b3b3b;
-
-$font-header: 'Roboto Slab', serif;
-
-$family-sans-serif: 'Source Sans Pro', sans-serif;
-
 * {
     margin: 0;
     padding: 0;
 }
 
+$blue: #3d5f8a;
+$blue-light: #86a4ca;
+$blue-dark: #1c2735;
+
+$red: #cd0000;
+$red-light: #d25353;
+$red-dark: #5b0909;
+
+$gray: #747070;
+$gray-light: #f4f4f4;
+$gray-dark: #3b3b3b;
+
+$font-stack: 'Source Sans Pro', sans-serif;
+$font-header: 'Roboto Slab', serif;
+
+
+:root {
+    // Colors
+    --color-primary: #{$blue};
+    --color-primary-light: #{$blue-light};
+    --color-primary-dark: #{$blue-dark};
+    
+    --color-secondary: #{$red};
+    --color-secondary-light: #{$red-light};
+    --color-secondary-dark: #{$red-dark};
+
+    --gray: #{$gray};
+    --gray-light: #{$gray-light};
+    --gray-dark: #{$gray-dark};
+
+    // Fonts
+    --font-stack: #{$font-stack};
+    --font-header: #{$font-header};
+}
+
 
 body {
     padding: 0 10%;
-    font-family: $family-sans-serif;
-    background-color: $grey-light;
+    font-family: var(--font-stack);
+    background-color: var(--grey-light);
     line-height: 1.5;
-	color: $grey-dark;
+	color: var(--grey-dark);
 }
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 0.5em 0;
-	font-weight: 400;
-	line-height: 1.2;
-}
+@import 'headers';
+@import 'lists';
 
-h1 {
-	font-size: 2em;
+
+a {
+    text-decoration: none;
+
+    &:link {
+        color: var(--color-primary);
+    }
+
+    &:visited {
+        color: var(--color-primary-light);
+    }
+
+    &:hover, &:active, &:focus {
+        color: var(--color-primary);
+        font-weight: 600;
+    }
 }
 
 .navbar {
-    background: $grey-dark;
-    box-shadow: 0px 2px $blue-mute;
+    background: var(--grey-dark);
+    box-shadow: 0px 2px var(--color-primary-light);
     margin-bottom: 2rem;
 }
 
 .navbar-item {
     text-decoration: none;
-}
-
-.primary {
-    color: $blue;
 }
