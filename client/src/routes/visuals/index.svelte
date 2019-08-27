@@ -1,17 +1,5 @@
-<style>
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    a:hover {color: cornflowerblue}
-
-</style>
-
 <script>
     let routes = ['bar']
-
 </script>
 
 
