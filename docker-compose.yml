@@ -2,13 +2,14 @@ version: '3'
 
 services:
 
-  server:
+  api:
     build:
       dockerfile: Dockerfile.dev
-      context: ./server
-    restart: always
+      context: ./api
+    volumes:
+      - ./api:/api
     ports:
-      - '3050:80'
+      - '5000:5000'
 
   client:
     build:
@@ -17,26 +18,7 @@ services:
     volumes:
       - /app/node_modules
       - ./client:/app
-    depends_on:
-      - mongo
-
-  api:
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./api
-    volumes:
-      - /app/node_modules
-      - ./api:/app
     ports:
-      - '5000:5000'
+      - 3000:3000
     depends_on:
-      - mongo
-
-  mongo:
-    image: mongo:latest
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: dev
-      MONGO_INITDB_ROOT_PASSWORD: dev
-    ports:
-      - '27017:27017'
+      - api

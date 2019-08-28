@@ -10,7 +10,7 @@ CORS(app)
 
 @app.route('/')
 def landing():
-    return 'Welcome to the landing page'
+    return 'No one home.'
 
 @app.route('/data/visuals/bar')
 def bar_chart():
