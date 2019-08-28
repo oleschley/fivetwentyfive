@@ -8,6 +8,7 @@ services:
       context: ./api
     volumes:
       - ./api:/api
+      - /etc/fivetwentyfive.conf:/etc/fivetwentyfive.conf
     ports:
       - '5000:5000'
 
