@@ -33,6 +33,11 @@
     color: white;
   }
 
+  a:hover, a:active, a:focus {
+      font-weight: 400;
+  }
+
+
 </style>
 
 <script>
