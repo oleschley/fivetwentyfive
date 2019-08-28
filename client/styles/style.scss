@@ -7,17 +7,21 @@
     padding: 0;
 }
 
-$blue: #3d5f8a;
-$blue-light: #86a4ca;
-$blue-dark: #1c2735;
+$blue: #347ee3;
+$blue-dark: #0a2549;
+$blue-light: #abc0f1;
 
-$red: #cd0000;
-$red-light: #d25353;
-$red-dark: #5b0909;
+$red: #e34234;
+$red-dark: #7d1a11;
+$red-light: #e34234;
+
+$orange: #e39a34;
+$orange-dark: #6b450f;
+$orange-light: #eab468;
 
 $gray: #747070;
-$gray-light: #f4f4f4;
 $gray-dark: #3b3b3b;
+$gray-light: #f4f4f4;
 
 $font-stack: 'Source Sans Pro', sans-serif;
 $font-header: 'Roboto Slab', serif;
@@ -26,16 +30,20 @@ $font-header: 'Roboto Slab', serif;
 :root {
     // Colors
     --color-primary: #{$blue};
-    --color-primary-light: #{$blue-light};
     --color-primary-dark: #{$blue-dark};
+    --color-primary-light: #{$blue-light};
     
     --color-secondary: #{$red};
-    --color-secondary-light: #{$red-light};
     --color-secondary-dark: #{$red-dark};
+    --color-secondary-light: #{$red-light};
+
+    --color-tertiary: #{$orange};
+    --color-tertiary-dark: #{$orange-dark};
+    --color-tertiary-light: #{$orange-light};
 
     --gray: #{$gray};
-    --gray-light: #{$gray-light};
     --gray-dark: #{$gray-dark};
+    --gray-light: #{$gray-light};
 
     // Fonts
     --font-stack: #{$font-stack};
@@ -70,14 +78,4 @@ a {
         color: var(--color-primary);
         font-weight: 600;
     }
-}
-
-.navbar {
-    background: var(--grey-dark);
-    box-shadow: 0px 2px var(--color-primary-light);
-    margin-bottom: 2rem;
-}
-
-.navbar-item {
-    text-decoration: none;
 }
