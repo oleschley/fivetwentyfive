@@ -2,24 +2,39 @@ version: '3'
 
 services:
 
+  mongo:
+    image: mongo:bionic
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27018:27017
+    volumes:
+      - ftfdb:/data/db
+  
   api:
     build:
       dockerfile: Dockerfile.dev
       context: ./api
     volumes:
       - ./api:/api
-      - /etc/fivetwentyfive.conf:/etc/fivetwentyfive.conf
     ports:
-      - '5000:5000'
-
-  client:
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./client
-    volumes:
-      - /app/node_modules
-      - ./client:/app
-    ports:
-      - 3000:3000
+      - 5000:5000
     depends_on:
-      - api
+      - mongo
+
+  # client:
+  #   build:
+  #     dockerfile: Dockerfile.dev
+  #     context: ./client
+  #   volumes:
+  #     - /app/node_modules
+  #     - ./client:/app
+  #   ports:
+  #     - 3000:3000
+  #   depends_on:
+  #     - api
+
+volumes:
+  ftfdb:

@@ -3,8 +3,8 @@ import random
 from bson import json_util
 from flask import Flask, jsonify
 from flask_cors import CORS
-from data.categorical import bars
-from models.visuals import gapminder
+from models.visuals import categorical_dummy
+# from models.visuals import gapminder
 app = Flask(__name__)
 CORS(app)
 
@@ -14,12 +14,13 @@ def landing():
 
 @app.route('/data/visuals/bar')
 def bar_chart():
-    return jsonify(bars)
-
-@app.route('/data/visuals/gapminder')
-def gapminder_viz():
-    data = gapminder.find({'continent': 'asia', 'year': {'$gt': 2000}}, {'_id': 0})
+    data = categorical_dummy.find()
     return json_util.dumps(data)
+
+# @app.route('/data/visuals/gapminder')
+# def gapminder_viz():
+#     data = gapminder.find({'continent': 'asia', 'year': {'$gt': 2000}}, {'_id': 0})
+#     return json_util.dumps(data)
 
 @app.route('/data/visuals/scatter')
 def scatter_plot():
