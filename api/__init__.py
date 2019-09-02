@@ -1,7 +1,11 @@
 import os
 
 from flask import Flask
-from api.routes.visuals import visuals
+from dotenv import load_dotenv
+
+from api.routes import visuals
+
+load_dotenv(verbose=True)
 
 def create_app(test_config=None):
     # create and configure the app
@@ -31,7 +35,7 @@ def create_app(test_config=None):
         return 'No one home...'
 
     # add blueprints
-    app.register_blueprint(visuals, url_prefix='/visuals')
+    app.register_blueprint(visuals.bp, url_prefix='/visuals')
 
     return app
 
