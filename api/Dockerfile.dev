@@ -10,4 +10,10 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "api.py" ]
+WORKDIR /
+
+ENV FLASK_APP api
+
+ENV FLASK_ENV development
+
+CMD [ "flask", "run", "--host=0.0.0.0"]
