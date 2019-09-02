@@ -5,14 +5,14 @@ from flask import Blueprint, jsonify
 
 from api.models.visuals import categorical_dummy
 
-visuals = Blueprint('visuals', __name__)
+bp = Blueprint('visuals', __name__)
 
 # @visuals.route('/bar')
 # def bar_chart():
 #     data = categorical_dummy.find()
 #     return json_util.dumps(data)
 
-@visuals.route('/scatter')
+@bp.route('/scatter')
 def scatter_plot():
     data = [{
         'x': random.random() * 500,
