@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask
+from flask_cors import CORS
 
 from api.routes import visuals
 
@@ -10,6 +11,8 @@ def create_app(test_config=None):
     app.config.update(
         SECRET_KEY='dev'
     )
+
+    CORS(app)
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
@@ -34,11 +37,3 @@ def create_app(test_config=None):
     app.register_blueprint(visuals.bp, url_prefix='/visuals')
 
     return app
-
-
-# from flask import Flask, jsonify
-# from flask_cors import CORS
-
-# # from models.visuals import gapminder
-# app = Flask(__name__)
-# CORS(app)
