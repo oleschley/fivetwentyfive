@@ -4,15 +4,16 @@
   "license": "MIT",
   "author": "ols",
   "scripts": {
-    "dev": "sapper dev",
+    "sapper-dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run",
+    "test": "run-p --race sapper-dev cy:run",
     "css-build": "node-sass --omit-source-map-url styles/style.scss static/global.css",
-    "css-watch": "npm run css-build -- --watch"
+    "css-watch": "npm run css-build -- --watch",
+    "dev": "run-p sapper-dev css-watch"
   },
   "dependencies": {
     "compression": "^1.7.1",

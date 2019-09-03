@@ -1,6 +1,4 @@
-# VERY OLD DOCKERFILE, DO NOT USE
-
-FROM node:alpine
+FROM mhart/alpine-node:12
 
 WORKDIR /app
 
