@@ -4,7 +4,7 @@
 	let bars = []
 
 	onMount(async () => {
-		const res = await fetch('http://localhost:5000/data/visuals/bar');
+		const res = await fetch('http://localhost:5000/visuals/bar');
 		bars = await res.json();
     });
 
