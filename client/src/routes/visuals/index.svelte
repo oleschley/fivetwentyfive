@@ -1,5 +1,5 @@
 <script>
-    let routes = ['bar']
+    let routes = ['bar', 'scatter']
 </script>
 
 
