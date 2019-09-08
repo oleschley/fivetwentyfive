@@ -1,0 +1,28 @@
+
+type Query {
+    greeting(name: String): String!
+    user: User!
+    post: Post!
+    scatter: [Scatter!]!
+}
+
+type User {
+    id: ID!
+    first: String!
+    last: String!
+    email: String!
+}
+
+type Post {
+    id: ID!
+    title: String!
+    body: String!
+    published: Boolean!
+}
+
+type Scatter {
+    x: Float!
+    y: Float!
+    radius: Float!
+    color: String!
+}
