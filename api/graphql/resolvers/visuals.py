@@ -1,6 +1,8 @@
 import random
 from ariadne import QueryType
 
+from api.data import categorical
+
 query = QueryType()
 
 @query.field('scatter')
@@ -14,10 +16,9 @@ def scatter(*_):
 
     return data
 
-# @query.field('bar')
-# def bar(*_):
-#     data = categorical_dummy.find()
-#     return json_util.dumps(data)
+@query.field('bar')
+def bar(*_):
+    return categorical.bars
 
 # @query.field('gapminder')
 # def gapminder():
