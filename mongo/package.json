@@ -1,0 +1,17 @@
+{
+  "name": "mongo",
+  "version": "0.0.1",
+  "description": "Generates data for a Mongo test database.",
+  "scripts": {
+    "generate": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "async": "^3.1.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.3",
+    "uuid": "^3.3.3"
+  }
+}
