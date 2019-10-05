@@ -3,15 +3,15 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
+[packages]
+pymongo = {extras = ["srv", "tls"],version = "*"}
+ariadne = "*"
+starlette = "*"
+uvicorn = "*"
+
 [dev-packages]
 autopep8 = "*"
 pylint = "*"
-
-[packages]
-flask = "*"
-pymongo = {extras = ["srv", "tls"],version = "*"}
-flask-cors = "*"
-ariadne = "*"
 
 [requires]
 python_version = "3.7"

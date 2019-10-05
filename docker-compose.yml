@@ -16,13 +16,14 @@ services:
       - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
 
   api:
+    restart: always
     build:
       dockerfile: Dockerfile.dev
       context: ./api
     volumes:
       - ./api:/api
     ports:
-      - 5000:5000
+      - 5000:8000
     depends_on:
       - mongo
 

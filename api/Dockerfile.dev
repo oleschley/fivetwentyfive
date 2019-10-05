@@ -12,8 +12,4 @@ COPY . .
 
 WORKDIR /
 
-ENV FLASK_APP api
-
-ENV FLASK_ENV development
-
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--reload"]
