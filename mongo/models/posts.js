@@ -21,6 +21,10 @@ const postSchema = new mongoose.Schema({
     body: {
         type: types.String,
         required: 'Field body cannot be empty.'
+    },
+    published: {
+        type: types.Boolean,
+        default: false
     }
 })
 

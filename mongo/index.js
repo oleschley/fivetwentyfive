@@ -39,13 +39,15 @@ async function seedUsers() {
 
 async function seedPosts() {
     for (let i = 0; i < data.Posts.titles.length; i++) {
+        // Generate post data
+        let user = await models.User.aggregate().sample(1)
         let created = generateDate(new Date(2016, 0, 1), new Date(2018, 0, 1))
         let updated = generateDate(created, new Date())
         let body = ''
         for (let i = 0; i < _.sample([1, 2, 3, 4]); i++) {
             body += _.sample(data.Posts.paragraphs)
         }
-        let user = await models.User.aggregate().sample(1)
+        let published = (Math.random() > 0.5) ? true : false
 
         await models.Post.create({
             _id: mongoose.Types.ObjectId(),
@@ -53,7 +55,8 @@ async function seedPosts() {
             created: moment(created).toISOString(),
             updated: moment(updated).toISOString(),
             title: data.Posts.titles[i],
-            body: body
+            body,
+            published
         })
     }
 }

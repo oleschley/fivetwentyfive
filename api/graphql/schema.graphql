@@ -1,4 +1,6 @@
 
+scalar Datetime
+
 type Query {
     greeting(name: String): String!
     user: User!
@@ -9,13 +11,15 @@ type Query {
 
 type User {
     id: ID!
-    first: String!
-    last: String!
+    name: String!
     email: String!
 }
 
 type Post {
     id: ID!
+    user: User!
+    created: Datetime!
+    updated: Datetime
     title: String!
     body: String!
     published: Boolean!
