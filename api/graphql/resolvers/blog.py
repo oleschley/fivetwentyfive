@@ -8,8 +8,7 @@ def resolve_user(*_):
 
     user = {
         'id': 'foobar123',
-        'first': 'foo',
-        'last': 'bar',
+        'name': 'test',
         'email': 'foo@bar.baz'
     }
 
