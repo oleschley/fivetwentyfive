@@ -6,13 +6,15 @@ services:
     image: mongo:bionic
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: testuser
-      MONGO_INITDB_ROOT_PASSWORD: testpass
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: fivetwentyfive
     ports:
-      - 27018:27017
+      - 27017:27017
     volumes:
       - ftfdb:/data/db
-  
+      - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+
   api:
     build:
       dockerfile: Dockerfile.dev
