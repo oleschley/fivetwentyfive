@@ -17,7 +17,7 @@ type User {
 
 type Post {
     id: ID!
-    user: User!
+    author: User!
     created: Datetime!
     updated: Datetime
     title: String!
