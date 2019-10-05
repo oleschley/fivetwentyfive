@@ -2,9 +2,9 @@ const mongoose = require('mongoose')
 const types = mongoose.Schema.Types
 
 const postSchema = new mongoose.Schema({
-    userId: {
+    author: {
         type: types.ObjectId,
-        required: 'Field userId cannot be empty.'
+        ref: 'User'
     },
     created: {
         type: types.Date,

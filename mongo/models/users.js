@@ -16,7 +16,11 @@ const userSchema = new mongoose.Schema({
         require: 'Field email cannot be empty.',
         trim: true,
         unique: true
-    }
+    },
+    posts: [{
+        type: types.ObjectId,
+        ref: 'Post'
+    }]
 })
 
 const User = mongoose.model('User', userSchema)

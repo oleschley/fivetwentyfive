@@ -40,7 +40,9 @@ async function seedUsers() {
 async function seedPosts() {
     for (let i = 0; i < data.Posts.titles.length; i++) {
         // Generate post data
-        let user = await models.User.aggregate().sample(1)
+        let author = await models.User.aggregate().sample(1)
+        author = await models.User.findById(author[0]._id)
+
         let created = generateDate(new Date(2016, 0, 1), new Date(2018, 0, 1))
         let updated = generateDate(created, new Date())
         let body = ''
@@ -49,15 +51,21 @@ async function seedPosts() {
         }
         let published = (Math.random() > 0.5) ? true : false
 
-        await models.Post.create({
+        let post = new models.Post({
             _id: mongoose.Types.ObjectId(),
-            userId: user[0]._id,
+            author: author,
             created: moment(created).toISOString(),
             updated: moment(updated).toISOString(),
             title: data.Posts.titles[i],
             body,
             published
         })
+
+        author.posts.push(post)
+
+        await Promise.all([post.save(), author.save()])
+                .then(() => console.log('Saved post'))
+                .catch(err => console.error(err))
     }
 }
 
