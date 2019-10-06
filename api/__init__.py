@@ -10,7 +10,6 @@ from ariadne.asgi import GraphQL
 
 from api.graphql.resolvers import (
     blog,
-    greeting,
     users,
     visuals
 )
@@ -19,10 +18,11 @@ type_defs = load_schema_from_path('/api/graphql/')
 resolvers = [
     blog.query,
     blog.post,
-    greeting.query,
     users.query,
+    users.user,
     visuals.query
 ]
+
 schema = make_executable_schema(type_defs, resolvers)
 
 app = Starlette(debug=True)
