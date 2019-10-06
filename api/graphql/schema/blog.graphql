@@ -1,0 +1,18 @@
+
+type Post {
+    _id: ID!
+    author: User!
+    created: String!
+    updated: String
+    title: String!
+    body: String!
+    published: Boolean!
+}
+
+# type PostPayload {
+    
+# }
+
+# input PostInput {
+
+# }

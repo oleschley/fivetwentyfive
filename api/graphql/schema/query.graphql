@@ -1,0 +1,7 @@
+
+type Query {
+    users(_id: ID): [User!]!
+    post(_id: ID): [Post!]
+    bar: [Bar!]!
+    scatter: [Scatter!]!
+}

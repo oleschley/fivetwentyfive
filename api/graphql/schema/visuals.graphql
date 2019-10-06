@@ -1,0 +1,12 @@
+
+type Bar {
+    key: String!
+    value: Int!
+}
+
+type Scatter {
+    x: Float!
+    y: Float!
+    radius: Float!
+    color: String!
+}
