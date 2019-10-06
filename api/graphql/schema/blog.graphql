@@ -9,10 +9,19 @@ type Post {
     published: Boolean!
 }
 
-# type PostPayload {
-    
-# }
+type Mutation {
+    createPost(input: PostInput!): PostPayload! 
+}
 
-# input PostInput {
+input PostInput {
+    author: ID!
+    title: String!
+    body: String!
+    published: Boolean!
+}
 
-# }
+type PostPayload {
+    status: Int!
+    _id: ID!
+    error: String
+}
