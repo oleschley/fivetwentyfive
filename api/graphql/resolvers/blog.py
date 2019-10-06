@@ -17,7 +17,7 @@ db = client[config.DATABASE]
 @query.field('post')
 def resolve_post(obj, info, _id=None):
     if _id:
-        return db.posts.find_one({'_id': ObjectId(_id)})
+        return [db.posts.find_one({'_id': ObjectId(_id)})]
     else:
         return db.posts.find()
 
