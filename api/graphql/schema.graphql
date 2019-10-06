@@ -1,25 +1,24 @@
 
-scalar Datetime
-
 type Query {
     greeting(name: String): String!
-    user: User!
-    post: Post!
+    user(_id: ID): User!
+    post(post_id: ID): [Post!]
     bar: [Bar!]!
     scatter: [Scatter!]!
 }
 
 type User {
-    id: ID!
+    _id: ID!
     name: String!
     email: String!
+    posts: [Post]!
 }
 
 type Post {
-    id: ID!
+    _id: ID!
     author: User!
-    created: Datetime!
-    updated: Datetime
+    created: String!
+    updated: String
     title: String!
     body: String!
     published: Boolean!
