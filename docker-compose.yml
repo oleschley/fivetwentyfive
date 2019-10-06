@@ -5,12 +5,14 @@ services:
   mongo:
     image: mongo:bionic
     restart: always
+    command:
+      - '--bind_ip_all'
+    ports:
+      - 27017:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: fivetwentyfive
-    ports:
-      - 27017:27017
     volumes:
       - ftfdb:/data/db
       - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
@@ -20,10 +22,10 @@ services:
     build:
       dockerfile: Dockerfile.dev
       context: ./api
-    volumes:
-      - ./api:/api
     ports:
       - 5000:8000
+    volumes:
+      - ./api:/api
     depends_on:
       - mongo
 
@@ -31,12 +33,12 @@ services:
     build:
       dockerfile: Dockerfile.dev
       context: ./client
-    volumes:
-      - /app/node_modules
-      - ./client:/app
     ports:
       - 3000:3000
       - 10000:10000
+    volumes:
+      - /app/node_modules
+      - ./client:/app
     depends_on:
       - api
 
