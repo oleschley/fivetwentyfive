@@ -6,6 +6,7 @@ from bson.objectid import ObjectId
 from api import config
 
 query = ObjectType('Query')
+user = ObjectType('User')
 
 client = MongoClient(config.MONGO_URI,
                         authSource=config.DATABASE,
@@ -14,12 +15,13 @@ client = MongoClient(config.MONGO_URI,
 
 db = client[config.DATABASE]
 
-
-cols = {'__v': 0}
-
-@query.field('user')
+@query.field('users')
 def resolve_user(obj, info, _id=None):
     if _id:
-        return db.users.find_one({'_id': ObjectId(_id)}, cols)
+        return [db.users.find_one({'_id': ObjectId(_id)})]
     else:
-        return db.users.find_one({}, cols)
+        return db.users.find({})
+
+@user.field('posts')
+def resolve_posts(obj, info):
+    return [p for p in db.posts.find({'author': ObjectId(obj.get('_id'))})]
