@@ -1,4 +1,5 @@
 import random
+import string
 from ariadne import QueryType
 
 from api.data import categorical
@@ -18,9 +19,20 @@ def scatter(*_):
 
 @query.field('bar')
 def bar(*_):
-    return categorical.bars
 
-# @query.field('gapminder')
-# def gapminder():
-#     data = gapminder.find({'continent': 'asia', 'year': {'$gt': 2000}}, {'_id': 0})
-#     return json_util.dumps(data)
+    population = {
+        'Hamburg': 1822445,
+        'Bamberg': 75743,
+        'Cleveland': 385525,
+        'Odense': 200703,
+        'Osaka': 2668586,
+        'Luebeck': 217198,
+        'Singapore': 5638700
+    }
+
+    data = [{
+        'city': k,
+        'population': v
+    } for k, v in population.items()]
+
+    return data

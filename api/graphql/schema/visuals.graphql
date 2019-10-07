@@ -1,7 +1,7 @@
 
 type Bar {
-    key: String!
-    value: Int!
+    city: String!
+    population: Int!
 }
 
 type Scatter {
