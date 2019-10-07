@@ -6,6 +6,7 @@ type Post {
     updated: String
     title: String!
     body: String!
+    tags: [String]!
     published: Boolean!
 }
 
@@ -17,6 +18,7 @@ input PostInput {
     author: ID!
     title: String!
     body: String!
+    tags: [String]
     published: Boolean!
 }
 

@@ -49,6 +49,16 @@ async function seedPosts() {
         for (let i = 0; i < _.sample([1, 2, 3, 4]); i++) {
             body += _.sample(data.Posts.paragraphs)
         }
+
+        let tags = []
+        console.log(tags)
+        for (let i = 0; i < _.sample([1, 2, 3, 4]); i++) {
+            let tag = _.sample(data.Posts.tags)
+            if (!tags.includes(tag)) {
+                tags.push(tag)
+            }
+        }
+
         let published = (Math.random() > 0.5) ? true : false
 
         let post = new models.Post({
@@ -58,6 +68,7 @@ async function seedPosts() {
             updated: moment(updated).toISOString(),
             title: data.Posts.titles[i],
             body,
+            tags,
             published
         })
 

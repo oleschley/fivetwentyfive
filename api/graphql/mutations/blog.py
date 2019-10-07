@@ -15,6 +15,7 @@ def create_post(obj, info, input):
             'created': datetime.datetime.utcnow(),
             'title': input['title'],
             'body': input['body'],
+            'tags': input.get('tags'),
             'published': input['published']
         }).inserted_id
 
