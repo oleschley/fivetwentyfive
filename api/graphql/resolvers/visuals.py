@@ -2,8 +2,6 @@ import random
 import string
 from ariadne import QueryType
 
-from api.data import categorical
-
 query = QueryType()
 
 @query.field('scatter')
