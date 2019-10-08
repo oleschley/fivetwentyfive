@@ -11,11 +11,21 @@ type Post {
 }
 
 type Mutation {
-    createPost(input: PostInput!): PostPayload! 
+    createPost(input: PostInput!): PostPayload!
+    updatePost(input: PostUpdate!): PostPayload!
+    deletePost(_id: ID!): Int!
 }
 
 input PostInput {
     author: ID!
+    title: String!
+    body: String!
+    tags: [String]
+    published: Boolean!
+}
+
+input PostUpdate {
+    _id: ID!
     title: String!
     body: String!
     tags: [String]
