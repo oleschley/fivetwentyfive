@@ -5,3 +5,8 @@ type Query {
     bar: [Bar!]!
     scatter: [Scatter!]!
 }
+
+fragment userFields on User {
+    _id
+    email
+}

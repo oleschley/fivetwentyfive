@@ -5,9 +5,10 @@ from . import (
 )
 
 all_resolvers = [
-    blog.query,
     blog.post,
-    users.query,
+    blog.query,
+    blog.mutation,
     users.user,
+    users.query,
     visuals.query
 ]
