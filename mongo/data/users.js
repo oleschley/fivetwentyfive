@@ -2,4 +2,10 @@ const firstNames = ["Amelia", "Margaret", "Emma", "Mary", "Samantha", "Olivia", 
 const lastNames = ["Bell", "Barnes", "Booth", "Butler", "Cooper", "Fisher", "Ford", "Johnson", "Holmes", "Miller", "Murray", "Simpson", "Smith", "Watson", "Wood"]
 const mailProviders = ["gmail.com", "yahoo.com", "hotmail.com", "gmx.com", "icloud.com"]
 
-module.exports = {firstNames, lastNames, mailProviders}
+const users = {
+    firstNames,
+    lastNames,
+    mailProviders
+}
+
+export { users as default }
