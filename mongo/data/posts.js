@@ -39,4 +39,10 @@ const tags = [
     "supernecessary"
 ]
 
-module.exports = {titles, paragraphs, tags}
+const posts = {
+    titles,
+    paragraphs,
+    tags
+}
+
+export { posts as default }

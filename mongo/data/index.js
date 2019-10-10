@@ -1,7 +1,9 @@
-const Users = require('./users')
-const Posts = require('./posts')
+import Users from './users'
+import Posts from './posts'
 
-module.exports = {
+const data = {
     Users,
     Posts
 }
+
+export { data as default }

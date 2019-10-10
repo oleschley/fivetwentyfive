@@ -1,11 +1,11 @@
 // External
-const _ = require('lodash')
-const moment = require('moment')
-const mongoose = require('mongoose')
+import _ from 'lodash'
+import moment from 'moment'
+import mongoose from 'mongoose'
 
 // Internal
-const data = require('./data')
-const models = require('./models')
+import data from './data'
+import models from './models'
 
 // Mongo config
 mongoose.Promise = global.Promise
@@ -51,7 +51,6 @@ async function seedPosts() {
         }
 
         let tags = []
-        console.log(tags)
         for (let i = 0; i < _.sample([1, 2, 3, 4]); i++) {
             let tag = _.sample(data.Posts.tags)
             if (!tags.includes(tag)) {
