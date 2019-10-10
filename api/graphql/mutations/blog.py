@@ -37,6 +37,7 @@ def update_post(obj, info, input):
                 'title': input['title'],
                 'body': input['body'],
                 'tags': input.get('tags'),
+                'updated': datetime.datetime.utcnow(),
                 'published': input['published']
             }
         })
