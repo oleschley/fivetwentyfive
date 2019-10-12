@@ -18,4 +18,4 @@ app.add_middleware(
     allow_headers=['*'],
     allow_methods=['*']
 )
-app.mount('/graphql', GraphQL(schema, debug=True))
+app.mount('', GraphQL(schema, debug=True))
