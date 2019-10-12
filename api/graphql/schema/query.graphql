@@ -1,8 +1,8 @@
 
 type Query {
     users(_id: ID): [User!]!
-    post(_id: ID): [Post!]
-    bar: [Bar!]!
+    posts(_id: ID): [Post!]
+    bars: [Bar!]!
     scatter: [Scatter!]!
 }
 
