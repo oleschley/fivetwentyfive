@@ -15,7 +15,7 @@ def scatter(*_):
 
     return data
 
-@query.field('bar')
+@query.field('bars')
 def bar(*_):
 
     population = {
