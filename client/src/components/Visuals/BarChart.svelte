@@ -1,17 +1,29 @@
 <script>
-    import { onMount } from 'svelte'
-
-	let bars = []
-
-	onMount(async () => {
-		const res = await fetch('http://localhost:5000/visuals/bar');
-		bars = await res.json();
-    });
-
+    let bars
+    let getData = fetch('http://localhost:5000/graphql/', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        },
+        body: JSON.stringify({query: `{ 
+            bars {
+                city
+                population
+            }
+        }`})
+    }).then(data => data.json())
+      .then(data => bars = data.data.bars)
 </script>
 
 <ul>
-    {#each bars as bar}
-    <li>{JSON.stringify(bar)}</li>
-    {/each}
+    {#await getData}
+        <p>Loading...</p>
+    {:then data}
+        {#each bars as bar}
+            <p>{JSON.stringify(bar)}</p>
+        {/each}
+    {:catch error}
+        <p style="color: red">{error.message}</p>
+    {/await}
 </ul>
