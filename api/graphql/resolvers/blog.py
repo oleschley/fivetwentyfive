@@ -9,7 +9,7 @@ post = ObjectType('Post')
 query = ObjectType('Query')
 mutation = ObjectType('Mutation')
 
-@query.field('post')
+@query.field('posts')
 def resolve_post(obj, info, _id=None):
     if _id:
         return [db.posts.find_one({'_id': ObjectId(_id)})]
