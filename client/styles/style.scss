@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Source+Sans+Pro');
 
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 $blue: #347ee3;
@@ -25,6 +26,10 @@ $gray-light: #f4f4f4;
 
 $font-stack: 'Source Sans Pro', sans-serif;
 $font-header: 'Roboto Slab', serif;
+$font-weight: 400;
+$font-weight-bold: 600;
+$font-weight-thin: 200;
+
 
 
 :root {
@@ -48,6 +53,10 @@ $font-header: 'Roboto Slab', serif;
     // Fonts
     --font-stack: #{$font-stack};
     --font-header: #{$font-header};
+    --font-weight: #{$font-weight};
+    --font-weight-bold: #{$font-weight-bold};
+    --font-weight-thin: #{$font-weight-thin};
+
 }
 
 
@@ -76,6 +85,6 @@ a {
 
     &:hover, &:active, &:focus {
         color: var(--color-primary);
-        font-weight: 600;
+        font-weight: var(--font-weight-bold);
     }
 }
