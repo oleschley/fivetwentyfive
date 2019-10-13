@@ -1,9 +1,19 @@
+<!-- MAIN LAYOUT PAGE -->
+<style>
+	.wrapper {
+		width: 95%;
+		margin: 0 auto;
+	}
+</style>
+
 <script>
 	import Navbar from '../components/UI/Navbar.svelte';
 </script>
 
-<Navbar/>
+<div class="wrapper">
+	<Navbar/>
+	<main>
+		<slot></slot>
+	</main>
+</div>
 
-<main>
-	<slot></slot>
-</main>
