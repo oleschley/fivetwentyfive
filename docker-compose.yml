@@ -41,5 +41,15 @@ services:
     depends_on:
       - api
 
+  nginx:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - 8080:443
+    depends_on:
+      - api
+      - client
+
 volumes:
   ftfdb:
