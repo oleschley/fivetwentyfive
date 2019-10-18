@@ -3,8 +3,8 @@
     let getData = fetch('http://localhost:8000', {
         method: 'POST',
         headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         },
         body: JSON.stringify({query: `{ 
             scatter {
@@ -19,14 +19,12 @@
 
 </script>
 
-<ul>
-    {#await getData}
-        <p>Loading...</p>
-    {:then data}
-        {#each circles as circle}
-            <p>{JSON.stringify(circle)}</p>
-        {/each}
-    {:catch error}
-        <p style="color: red">{error.message}</p>
-    {/await}
-</ul>
+{#await getData}
+    <p>Loading...</p>
+{:then data}
+    {#each circles as circle}
+        <p>{JSON.stringify(circle)}</p>
+    {/each}
+{:catch error}
+    <p style="color: red">{error.message}</p>
+{/await}
