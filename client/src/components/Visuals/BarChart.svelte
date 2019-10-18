@@ -17,28 +17,27 @@
     import { axisBottom, axisRight } from 'd3-axis'
 
     // Declare canvas
-    const m = {left: 50, right: 50, top: 50, bottom: 50}
-    const w = 600 - m.left - m.right
+    const m = {left: 20, right: 20, top: 20, bottom: 20}
+    const w = 800 - m.left - m.right
     const h = 400 - m.top - m.bottom
 
-    let xScale
-    let yScale
+    let x
+    let y
     let xAxis
     let yAxis
-    let xBandwith
 
     // Set scales and axes
-    function setXScale(data) {
+    function setX(data) {
         return scaleBand()
+                .domain(data.map(d => d.city))
                 .range([0, w])
                 .padding(0.1)
-                .domain(data.map(d => d.city))    
     }
 
-    function setYScale(data) {
+    function setY(data) {
         return scaleLinear()
-                .range([h, 0])
                 .domain([0, max(data, d => d.population)])
+                .range([h, 0])
     }
 
     function setXAxis(scale) {
@@ -66,22 +65,23 @@
 
         response = await response.json()
         data = response.data.bars
-        xScale = setXScale(data)
-        yScale = setYScale(data)
-        xAxis = setXScale(xScale)
-        yAxis = setYScale(yScale)
+        x = setX(data)
+        y = setY(data)
+        xAxis = setXAxis(xScale)
+        yAxis = setYAxis(yScale)
     })
 </script>
 
 <svg width={w} height={h}>
-    <g transform="translate({m.left},{m.top})">
+    <!-- <g transform="translate({m.left},{m.top})"> -->
+    <g transform="translate({0},{0})">
         {#each data as d}
             <rect
                 class="bar"
-                x={xScale(d.city)}
-                y={yScale(d.population)}
-                width={xScale.bandwidth()}
-                height={h - yScale(d.population)}>
+                x={x(d.city)}
+                y={y(d.population)}
+                width={x.bandwidth()}
+                height={h - y(d.population)}>
             </rect>
         {/each}
     </g>
