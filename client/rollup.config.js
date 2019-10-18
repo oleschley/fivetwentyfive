@@ -55,8 +55,10 @@ export default {
 				module: true
 			})
 		],
-
-		onwarn,
+		onwarn: function (warning, warn) {
+			if (warning.code === 'CIRCULAR_DEPENDENCY') return;
+			warn(warning);
+		},
 	},
 
 	server: {
