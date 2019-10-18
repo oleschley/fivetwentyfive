@@ -4,6 +4,10 @@
 		width: 95%;
 		margin: 0 auto;
 	}
+
+	main {
+		margin-top: 3rem;
+	}
 </style>
 
 <script>
