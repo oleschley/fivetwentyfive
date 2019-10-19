@@ -19,7 +19,7 @@
     .item::after {
         display:block;
         content: '';
-        border-bottom: solid 2px var(--gray-dark);  
+        border-bottom: solid 1px var(--gray-dark);  
         transform: scaleX(0);  
         transition: transform 250ms ease-in-out;
     }
