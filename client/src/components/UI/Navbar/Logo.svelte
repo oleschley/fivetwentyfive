@@ -7,6 +7,7 @@
         justify-content: stretch;
         align-content: stretch;
         grid-gap: 1px;
+        padding: 5px;
     }
 
     .primary {
