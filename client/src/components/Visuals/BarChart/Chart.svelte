@@ -1,29 +1,11 @@
-<style>
-
-.bar {
-    fill: var(--gray-lighter);
-    transition: fill 150ms ease-in;
-}
-
-.bar:hover {
-    fill: var(--color-primary);
-}
-
-line {
-    stroke: var(--gray-dark);
-}
-
-text {
-    font-size: 0.75rem;
-}
-
-</style>
-
 <script>
     import { onMount } from 'svelte'
     import { scaleBand, scaleLinear } from 'd3-scale'
-    import { axisBottom, axisRight } from 'd3-axis'
     import { max } from 'd3-array'
+
+    import Marks from './Marks.svelte'
+    import AxisX from './AxisX.svelte'
+    import AxisY from './AxisY.svelte'
 
     // Declare variables and canvas
     let x
@@ -61,32 +43,12 @@ text {
                 .domain([0, max(data, d => d.population)])
                 .range([h, 0])
     })
-
 </script>
 
 <svg width="100%" height="100%" viewbox="0 0 {w + m.left + m.right} {h + m.top + m.bottom}">
-    <g class="canvas" transform="translate({m.left},{m.top})"></g>
-        <g class="data">
-            {#each data as d}
-                <rect
-                    class="bar"
-                    x={x(d.city)}
-                    y={y(d.population)}
-                    width={x.bandwidth()}
-                    height={h - y(d.population)}>
-                </rect>
-            {/each}
-        </g>
-        <g class="axis x" transform="translate(0,{h})">
-            <line x2="{w}"/>
-            {#each data as d}
-                <g class="tick" transform="translate({x(d.city)}, 0)">
-                    <line x1={x.bandwidth() / 2} x2={x.bandwidth() / 2} y2="3"></line>
-                    <text y="15" text-anchor="middle" dx={x.bandwidth() / 2}>{d.city}</text>
-                </g>
-            {/each}
-        </g>
-        <g class="axis y">
-            <line y2={h}/>
-        </g>
+    <g class="canvas" transform="translate({m.left},{m.top})">
+        <Marks class="marks" {data} {x} {y} {h}/>
+        <AxisX class="axis x" {data} {x} {w} {h}/>
+        <AxisY class="axis y" {h}/>
+    </g>
 </svg>
