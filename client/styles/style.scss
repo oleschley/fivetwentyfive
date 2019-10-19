@@ -23,6 +23,7 @@ $orange-light: #eab468;
 $gray: #747070;
 $gray-dark: #3b3b3b;
 $gray-light: #f4f4f4;
+$gray-lighter: #8e8e8e;
 
 $font-stack: 'Source Sans Pro', sans-serif;
 $font-header: 'Roboto Slab', serif;
@@ -49,6 +50,7 @@ $font-weight-thin: 200;
     --gray: #{$gray};
     --gray-dark: #{$gray-dark};
     --gray-light: #{$gray-light};
+    --gray-lighter: #{$gray-lighter};
 
     // Fonts
     --font-stack: #{$font-stack};
