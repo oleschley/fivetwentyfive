@@ -1,6 +1,5 @@
 <script>
-    import ScatterPlot from '../../components/Visuals/ScatterPlot.svelte'
+    import ScatterPlot from '../../components/Visuals/ScatterPlot/Chart.svelte'
 </script>
-
 
 <ScatterPlot/>
