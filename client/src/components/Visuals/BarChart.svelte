@@ -65,27 +65,28 @@ text {
 </script>
 
 <svg width="100%" height="100%" viewbox="0 0 {w + m.left + m.right} {h + m.top + m.bottom}">
-    <g class="data" transform="translate({m.left},{m.top})">
-        {#each data as d}
-            <rect
-                class="bar"
-                x={x(d.city)}
-                y={y(d.population)}
-                width={x.bandwidth()}
-                height={h - y(d.population)}>
-            </rect>
-        {/each}
-    </g>
-    <g class="axis x" transform="translate({m.left},{h + m.top})">
-        <line x2="{w}"/>
-        {#each data as d}
-            <g class="tick" transform="translate({x(d.city)}, 0)">
-                <line x1="{x.bandwidth() / 2}" x2="{x.bandwidth() / 2}" y2="3"></line>
-                <text y="15" text-anchor="middle" dx="{x.bandwidth() / 2}">{d.city}</text>
-            </g>
-        {/each}
-    </g>
-    <g class="axis y" transform="translate({m.left},{m.top})">
-        <line y2="{h}"/>
-    </g>
+    <g class="canvas" transform="translate({m.left},{m.top})"></g>
+        <g class="data">
+            {#each data as d}
+                <rect
+                    class="bar"
+                    x={x(d.city)}
+                    y={y(d.population)}
+                    width={x.bandwidth()}
+                    height={h - y(d.population)}>
+                </rect>
+            {/each}
+        </g>
+        <g class="axis x" transform="translate(0,{h})">
+            <line x2="{w}"/>
+            {#each data as d}
+                <g class="tick" transform="translate({x(d.city)}, 0)">
+                    <line x1={x.bandwidth() / 2} x2={x.bandwidth() / 2} y2="3"></line>
+                    <text y="15" text-anchor="middle" dx={x.bandwidth() / 2}>{d.city}</text>
+                </g>
+            {/each}
+        </g>
+        <g class="axis y">
+            <line y2={h}/>
+        </g>
 </svg>
