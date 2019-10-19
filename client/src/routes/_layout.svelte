@@ -3,10 +3,14 @@
 	.wrapper {
 		width: 95%;
 		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 3rem 1fr 2rem;
+		grid-gap: 1rem;
 	}
 
-	main {
-		margin-top: 3rem;
+	footer {
+		color: var(--gray);
 	}
 </style>
 
@@ -19,5 +23,6 @@
 	<main>
 		<slot></slot>
 	</main>
+	<footer>put a footer here</footer>
 </div>
 
