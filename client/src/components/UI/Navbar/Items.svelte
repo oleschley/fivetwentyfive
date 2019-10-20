@@ -1,4 +1,7 @@
-<style>
+<style lang="scss">
+
+    @import '../../../../styles/_theme.scss';
+
     .container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -8,25 +11,26 @@
     }
 
     a:hover, a:active, a:focus {
-        font-weight: var(--font-weight);
+        font-weight: $font-weight;
     }
 
     .item {
         margin-bottom: 0.25rem;
-        color: var(--gray-dark);
+        color: $gray-dark;
+
+        &::after {
+            display:block;
+            content: '';
+            border-bottom: solid 1px $gray-dark;  
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
     }
 
-    .item::after {
-        display:block;
-        content: '';
-        border-bottom: solid 1px var(--gray-dark);  
-        transform: scaleX(0);  
-        transition: transform 250ms ease-in-out;
-    }
-
-    .item:hover::after {
-        transform: scaleX(1);
-    }
 </style>
 
 <script>

@@ -5,15 +5,17 @@
     export let h
 </script>
 
-<style>
-rect {
-    fill: var(--gray-lighter);
-    transition: fill 150ms ease-in;
-}
+<style lang="scss">
+    @import '../../../../styles/_theme.scss';
 
-rect:hover {
-    fill: var(--color-primary);
-}
+    rect {
+        fill: lighten($gray, 20);
+        transition: fill 150ms ease-in;
+
+        &:hover {
+            fill: $color-primary
+        }
+    }
 </style>
 
 <g>

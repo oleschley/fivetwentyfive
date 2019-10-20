@@ -5,14 +5,16 @@
     export let h
 </script>
 
-<style>
-line {
-    stroke: var(--gray-dark);
-}
+<style lang="scss">
+    @import '../../../../styles/_theme.scss';
 
-text {
-    font-size: 0.75rem;
-}
+    line {
+        stroke: $gray-dark;
+    }
+
+    text {
+        font-size: 0.75rem;
+    }
 </style>
 
 <g transform="translate(0,{h})">

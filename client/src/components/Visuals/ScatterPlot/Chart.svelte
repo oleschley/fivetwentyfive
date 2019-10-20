@@ -9,7 +9,7 @@
     const num = 100
     const maxX = 1600
     const maxY = 800
-    const colors = ['#347ee3', '#e34234', '#eab468']
+    const colors = ['primary', 'secondary', 'tertiary']
 
     const m = {left: 20, right: 20, top: 20, bottom: 20}
     const w = 800 - m.left - m.right

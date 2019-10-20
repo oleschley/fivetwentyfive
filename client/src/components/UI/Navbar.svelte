@@ -1,4 +1,6 @@
-<style>
+<style lang="scss">
+
+  @import '../../../../styles/_theme.scss';
 
   .navbar {
     position: sticky;
@@ -9,7 +11,7 @@
     grid-gap: 1rem;
     font-size: 1.1rem;
 
-    border-bottom: 1px solid var(--gray)
+    border-bottom: 1px solid $gray;
   }
 
 </style>

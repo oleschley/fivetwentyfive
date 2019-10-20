@@ -2,10 +2,13 @@
     export let h
 </script>
 
-<style>
-line {
-    stroke: var(--gray-dark);
-}
+<style lang="scss">
+    @import '../../../../styles/_theme.scss';
+
+    line {
+        stroke: $gray-dark;
+    }
+
 </style>
 
 <g>
