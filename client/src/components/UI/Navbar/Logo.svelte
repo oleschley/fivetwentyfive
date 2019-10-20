@@ -1,5 +1,7 @@
 
-<style>
+<style lang="scss">
+    @import '../../../../styles/_theme.scss';
+
     .logo {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -7,18 +9,19 @@
         justify-content: stretch;
         align-content: stretch;
         grid-gap: 1px;
+        padding: 5px;
     }
 
     .primary {
-        background-color: var(--color-primary);
+        background-color: $color-primary;
     }
 
     .secondary {
-        background-color: var(--color-secondary);
+        background-color: $color-secondary;
     }
 
     .gray {
-        background-color: var(--gray-dark);
+        background-color: $gray-dark;
     }
 </style>
 

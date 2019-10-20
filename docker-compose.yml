@@ -35,6 +35,7 @@ services:
       context: ./client
     ports:
       - 3000:3000
+      - 10000:10000
     volumes:
       - /app/node_modules
       - ./client:/app

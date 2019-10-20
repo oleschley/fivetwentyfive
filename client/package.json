@@ -11,31 +11,35 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race sapper-dev cy:run",
-    "css-build": "node-sass --omit-source-map-url styles/style.scss static/global.css",
-    "css-watch": "npm run css-build -- --watch",
-    "dev": "run-p sapper-dev css-watch"
+    "dev": "run-p sapper-dev"
   },
   "dependencies": {
     "compression": "^1.7.1",
+    "d3-array": "^2.3.3",
+    "d3-axis": "^1.0.12",
+    "d3-scale": "^3.1.0",
+    "lodash": "^4.17.15",
     "polka": "next",
     "sirv": "^0.4.0"
   },
   "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "node-sass": "^4.12.0",
-    "sapper": "^0.27.0",
-    "svelte": "^3.0.0",
     "@babel/core": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
+    "autoprefixer": "^9.6.5",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
     "rollup": "^1.12.0",
     "rollup-plugin-babel": "^4.0.2",
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-svelte": "^5.0.1",
-    "rollup-plugin-terser": "^4.0.4"
+    "rollup-plugin-terser": "^4.0.4",
+    "sapper": "^0.27.0",
+    "svelte": "^3.0.0",
+    "svelte-preprocess": "^3.1.2"
   }
 }

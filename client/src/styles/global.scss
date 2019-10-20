@@ -1,0 +1,47 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Source+Sans+Pro');
+
+@import 'theme';
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    box-sizing: border-box;
+    padding: 0 10%;
+    font-family: var(--font-stack);
+    background-color: var(--grey-light);
+    line-height: 1.5;
+	color: var(--grey-dark);
+}
+
+
+@import 'headers';
+@import 'layout';
+@import 'lists';
+
+
+a {
+    text-decoration: none;
+
+    &:link {
+        color: var(--color-primary);
+    }
+
+    &:visited {
+        color: var(--color-primary-light);
+    }
+
+    &:hover, &:active, &:focus {
+        color: var(--color-primary);
+        font-weight: var(--font-weight-bold);
+    }
+}

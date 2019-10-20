@@ -1,5 +1,5 @@
 <script>
-    import BarChart from '../../components/Visuals/BarChart.svelte'
+    import BarChart from '../../components/Visuals/BarChart/Chart.svelte'
 </script>
 
 

@@ -3,10 +3,3 @@ type Bar {
     city: String!
     population: Int!
 }
-
-type Scatter {
-    x: Float!
-    y: Float!
-    radius: Float!
-    color: String!
-}

@@ -4,17 +4,6 @@ from ariadne import QueryType
 
 query = QueryType()
 
-@query.field('scatter')
-def scatter(*_):
-    data = [{
-        'x': random.random() * 500,
-        'y': random.random() * 500,
-        'radius': random.random() * (20 - 5) + 5,
-        'color': random.choice(['steelblue', 'orange', 'firebrick'])
-    } for i in range(100)]
-
-    return data
-
 @query.field('bars')
 def bar(*_):
 

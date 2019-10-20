@@ -3,7 +3,6 @@ type Query {
     users(_id: ID): [User!]!
     posts(_id: ID): [Post!]
     bars: [Bar!]!
-    scatter: [Scatter!]!
 }
 
 fragment userFields on User {

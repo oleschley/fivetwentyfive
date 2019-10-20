@@ -1,14 +1,17 @@
-<style>
+<style lang="scss">
+
+  @import '../../../../styles/_theme.scss';
 
   .navbar {
     position: sticky;
-    top: 1rem;
     display: grid;
-    height: 2.5rem;
-    grid-template-columns: 2.5rem 1fr;
+
+    grid-template-columns: 3rem 1fr;
     grid-auto-flow: column;
     grid-gap: 1rem;
     font-size: 1.1rem;
+
+    border-bottom: 1px solid $gray;
   }
 
 </style>
