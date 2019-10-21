@@ -1,0 +1,53 @@
+
+// Basic reset and default styles for html elements 
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0 10%;
+    background-color: var(--grey-light);
+}
+
+
+
+a {
+    text-decoration: none;
+
+    &:link {
+        color: $color-primary;
+    }
+
+    &:visited {
+        color: $color-primary-light;
+    }
+
+    &:hover, &:active, &:focus {
+        color: $color-primary;
+        font-weight: $font-weight-bold;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 0.5em 0;
+	font-weight: $font-weight;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+ul {
+    list-style-type: none;
+}
