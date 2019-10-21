@@ -7,6 +7,7 @@
 
     line {
         stroke: $gray-dark;
+        stroke-width: 0.5;
     }
 
 </style>
