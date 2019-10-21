@@ -2,7 +2,7 @@
 Files to populate a Mongo test database.
 
 ## Generate data
-`npm run generate`
+`npm run seed`
 
 ## Execute mongo shell
 Enter into mongo shell so that we can populate databases and collections as needed.
