@@ -1,7 +1,7 @@
 
 type Query {
     users(_id: ID): [User!]!
-    posts(_id: ID): [Post!]
+    posts(_id: ID): [Post]!
     bars: [Bar!]!
 }
 
