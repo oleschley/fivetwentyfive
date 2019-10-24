@@ -1,13 +1,23 @@
+<script>
+    const items = [
+        {
+            route: 'blog',
+            display: 'なるほどね'
+        }, {
+            route: 'viz',
+            display: 'data viz'
+        }
+    ]
+</script>
+
 <style lang="scss">
 
     @import '../../../../styles/_theme.scss';
 
     .container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
         align-items: center;
-        justify-items: center;
-        text-transform: uppercase;
+        justify-self: flex-end;
     }
 
     a:hover, a:active, a:focus {
@@ -15,6 +25,7 @@
     }
 
     .item {
+        padding: 0 1rem;
         margin-bottom: 0.25rem;
         color: $gray-dark;
 
@@ -33,13 +44,8 @@
 
 </style>
 
-<script>
-    const items = ['blog', 'visuals', 'recipes', 'training']
-</script>
-
-
 <div class="container">
 {#each items as item}
-    <a href={item} class="item">{item}</a>
+    <a href={item.route} class="item">{item.display}</a>
 {/each}
 </div>

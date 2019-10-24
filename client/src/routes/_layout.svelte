@@ -1,9 +1,14 @@
 <!-- MAIN LAYOUT PAGE -->
+<script>
+	import Navbar from '../components/UI/Navbar.svelte';
+</script>
+
 <style>
 
 .wrapper {
     width: 95%;
     margin: 0 auto;
+    margin-top: 2vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3rem 1fr 2rem;
@@ -15,10 +20,6 @@ footer {
 }
 
 </style>
-
-<script>
-	import Navbar from '../components/UI/Navbar.svelte';
-</script>
 
 <div class="wrapper">
 	<Navbar/>
