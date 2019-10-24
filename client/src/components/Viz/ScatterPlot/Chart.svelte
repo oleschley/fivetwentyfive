@@ -3,8 +3,6 @@
     import { scaleLinear } from 'd3-scale'
 
     import Marks from './Marks.svelte'
-    // import AxisX from './AxisX.svelte'
-    // import AxisY from './AxisY.svelte'
 
     const num = 100
     const maxX = 1600
