@@ -2,7 +2,6 @@
     let routes = ['bar', 'scatter']
 </script>
 
-
 <svelte:head>
 	<title>visuals</title>
 </svelte:head>
