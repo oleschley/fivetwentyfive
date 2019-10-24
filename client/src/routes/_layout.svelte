@@ -26,6 +26,6 @@ footer {
 	<main>
 		<slot></slot>
 	</main>
-	<footer>put a footer here</footer>
+	<footer>俺はオレ</footer>
 </div>
 
