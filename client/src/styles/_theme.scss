@@ -1,22 +1,26 @@
-$color-primary: #347ee3;
-$color-primary-dark: #0a2549;
-$color-primary-light: #abc0f1;
 
-$color-secondary: #e34234;
-$color-secondary-dark: #7d1a11;
-$color-secondary-light: #e34234;
-
-$color-tertiary: #e39a34;
-$color-tertiary-dark: #6b450f;
-$color-tertiary-light: #eab468;
-
-$gray: #747070;
-$gray-dark: #3b3b3b;
-$gray-light: #f4f4f4;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Source+Sans+Pro');
 
 
-$font-stack: 'Source Sans Pro', sans-serif;
-$font-header: 'Roboto Slab', serif;
+$color-primary: hsl(215, 76, 50);
+$color-primary-dark: hsl(215, 76, 25);
+$color-primary-light: hsl(215, 76, 75);;
+
+$color-secondary: hsl(5, 76, 50);
+$color-secondary-dark: hsl(5, 76, 25);
+$color-secondary-light: hsl(5, 76, 60);
+
+$color-tertiary: hsl(40, 100, 50);
+$color-tertiary-dark: hsl(30, 100, 25);
+$color-tertiary-light: hsl(30, 100, 60);
+
+$gray: hsl(0, 0, 50);
+$gray-dark: hsl(0, 0, 20);
+$gray-light: hsl(0, 0, 70);
+
+
+$font-stack: 'Source Sans Pro',  sans-serif;
+$font-header: 'Roboto Slab',  serif;
 $font-weight: 400;
 $font-weight-bold: 600;
 $font-weight-thin: 200;
