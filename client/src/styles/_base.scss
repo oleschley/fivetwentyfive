@@ -15,25 +15,11 @@ html {
 
 body {
     box-sizing: border-box;
-    padding: 0 10%;
-    background-color: var(--grey-light);
 }
 
 a {
     text-decoration: none;
-
-    &:link {
-        color: $color-primary;
-    }
-
-    &:visited {
-        color: $color-primary-light;
-    }
-
-    &:hover, &:active, &:focus {
-        color: $color-primary;
-        font-weight: $font-weight-bold;
-    }
+    color: inherit;
 }
 
 ul {
