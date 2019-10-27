@@ -9,7 +9,7 @@
     grid-template-columns: 3rem 1fr;
     grid-auto-flow: column;
     grid-gap: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 
     border-bottom: 1px solid $gray;
   }
