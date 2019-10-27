@@ -1,4 +1,6 @@
 <script>
+import Card from './Card.svelte'
+
 import { onMount } from 'svelte'
 
 let posts = []
@@ -23,15 +25,25 @@ onMount(async () => {
     response = await response.json()
     posts = response.data.posts
 })
-
 </script>
 
-{#each posts as post}
-    <h3>{post.title}</h3>
-    <div>{@html post.body}</div>
-    <ul>
-        {#each post.tags as tag}
-            <li>{tag}</li>
-        {/each}
-    </ul>
-{/each}
+<style lang="scss">
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
+        grid-gap: 1rem;
+    }
+
+    :nth-child(4n -1) {
+        grid-column: 2;
+    }
+
+</style>
+
+<div class="container">
+    {#each posts as post}
+        <div><Card {post} /></div>
+        <div>Put some art here...</div>
+    {/each}
+</div>
