@@ -1,53 +1,32 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:700|Source+Sans+Pro");
-*, *::before, *::after {
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:700|Source+Sans+Pro|Source+Code+Pro:900");
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: inherit; }
 
-:root {
-  --color-primary: #347ee3;
-  --color-primary-dark: #0a2549;
-  --color-primary-light: #abc0f1;
-  --color-secondary: #e34234;
-  --color-secondary-dark: #7d1a11;
-  --color-secondary-light: #e34234;
-  --color-tertiary: #e39a34;
-  --color-tertiary-dark: #6b450f;
-  --color-tertiary-light: #eab468;
-  --gray: #747070;
-  --gray-dark: #3b3b3b;
-  --gray-light: #f4f4f4;
-  --gray-lighter: #8e8e8e;
-  --font-stack: Source Sans Pro, sans-serif;
-  --font-header: Roboto Slab, serif;
-  --font-weight: 400;
-  --font-weight-bold: 600;
-  --font-weight-thin: 200; }
+html {
+  font-size: 62.5%; }
 
 body {
-  padding: 0 10%;
-  font-family: var(--font-stack);
-  background-color: var(--grey-light);
-  line-height: 1.5;
-  color: var(--grey-dark); }
+  box-sizing: border-box; }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 0.5em 0;
-  font-weight: 400;
-  line-height: 1.2; }
-
-h1 {
-  font-size: 2em; }
+a {
+  text-decoration: none;
+  color: inherit; }
 
 ul {
   list-style-type: none; }
 
-a {
-  text-decoration: none; }
-  a:link {
-    color: var(--color-primary); }
-  a:visited {
-    color: var(--color-primary-light); }
-  a:hover, a:active, a:focus {
-    color: var(--color-primary);
-    font-weight: var(--font-weight-bold); }
+body {
+  color: #333333;
+  font-style: normal;
+  font-size: 1.5rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  line-height: 1.5; }
+
+header {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600; }
