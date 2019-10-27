@@ -37,7 +37,7 @@
         x = scaleBand()
                 .domain(data.map(d => d.city))
                 .range([0, w])
-                .padding(0.1)
+                .padding(0.4)
 
         y = scaleLinear()
                 .domain([0, max(data, d => d.population)])
