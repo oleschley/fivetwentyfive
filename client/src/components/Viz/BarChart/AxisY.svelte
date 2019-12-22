@@ -3,7 +3,6 @@
 </script>
 
 <style lang="scss">
-    @import '../../../../styles/_theme.scss';
 
     line {
         stroke: $gray-dark;

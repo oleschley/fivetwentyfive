@@ -6,8 +6,6 @@
 </script>
 
 <style lang="scss">
-    @import '../../../../styles/_theme.scss';
-
     rect {
         fill: lighten($gray, 20);
         transition: fill 150ms ease-in;

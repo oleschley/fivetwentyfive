@@ -5,7 +5,6 @@
 </script>
 
 <style lang="scss">
-    @import '../../../../styles/_theme.scss';
 
     .color {
         &.primary {
