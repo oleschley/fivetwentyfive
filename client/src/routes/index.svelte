@@ -1,32 +1,25 @@
 <script>
-	import Logo from '../components/UI/Logo.svelte'
+    import Logo from '../components/UI/Logo.svelte'
+    import Items from '../components/UI/Navbar/Items.svelte'
+    
 </script>
 
 <svelte:head>
-	<title>DATA DESIGN NARUHODO</title>
+	<title>Der nullte Grad</title>
 </svelte:head>
 
 <style lang="scss">
 
     .splash {
         height: 90vh;
-        padding-top: 4rem;
-        padding-left: 4rem;
+        padding: 2rem 4rem;
         display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-
-        grid-template-areas:
-            "logo logo logo . . . . . ."
-            "logo logo logo . . . . . ."
-            "logo logo logo . ch ch ch ch ."
-            " . . . . ch ch ch ch ."
-            " . . . . ch ch ch ch ."
-            " . . . . ch ch ch ch ."
+        grid-template-rows: 4rem repeat(6, 1fr);
     }
 
 </style>
 
 <div class="splash">
+    <Items/>
 	<Logo/>
 </div>
