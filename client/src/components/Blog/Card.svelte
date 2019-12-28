@@ -4,8 +4,6 @@
 
 <style lang="scss">
 
-    @import "../../../styles/_theme.scss";
-
     .card {
         height: 40vh;
         padding: 1rem;

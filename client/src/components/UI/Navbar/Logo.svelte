@@ -1,6 +1,5 @@
 
 <style lang="scss">
-    @import '../../../../styles/_theme.scss';
 
     .logo {
         display: grid;

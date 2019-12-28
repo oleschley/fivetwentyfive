@@ -12,8 +12,6 @@
 
 <style lang="scss">
 
-    @import '../../../../styles/_theme.scss';
-
     .container {
         display: flex;
         align-items: center;
